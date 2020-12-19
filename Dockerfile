@@ -8,6 +8,7 @@ ENV PYTHONUNBUFFER 1
 COPY ./requirement.txt /requirement.txt
 RUN pip install -r /requirement.txt
 
+#RUN rm -rf  /app
 RUN mkdir /app
 WORKDIR /app
 COPY ./app /app
