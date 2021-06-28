@@ -1,11 +1,11 @@
 launguage: python
-python:
-  - "3.8.5"
-
+python:flake8
+    - "3.8.5"
+    
 services:
-  - docker
-
+   - docker
+   
 before_script: pip install docker-compose
 
-sccript:
-  - docker-compose run app sh -c "python manage.py test && flake8"
+script:
+    -docker-compose run app sh -c "python manage.py test && flake8"
